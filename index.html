@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./breathestyles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+    <script src="https://kit.fontawesome.com/a6858ade68.js" crossorigin="anonymous"></script>
+    <title>Breathe App Alpha</title>
+</head>
+<body>
+    
+    <header>
+        Breathe
+    </header>
+        
+    <div id="illustration">
+
+    </div>
+
+    <div id="controls">
+        <div class="controlblock" id="speedcontrols">
+            <div class="controlblocktitle">Speed</div>
+            <button  class="leftbutton" id="speeddown"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>       
+            <div class="readout" id="speedreadout"></div>
+            <button class="rightbutton" id="speedup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+        
+        <div class="controlblock" id="volumecontrols">
+            <div class="controlblocktitle">Volume</div>
+            <button class="leftbutton" id="volumedown"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>       
+            <div class="readout" id="volumereadout"></div>
+            <button class="rightbutton" id="volumeup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="audioplayer" id="audiocontrols">
+            <div id="audioplayertitle">Audio Player</div>
+            <button id="audioplay"><i class="fa fa-play" aria-hidden="true"></i></button>   
+            <select name="musicselect" id="musicselect">
+                <option value="music1">Calming Music</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>    
+
+        </div>
+
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a class="navlink" href="index.html">Breathe</a></li>
+                <li><a class="navlink" href="help.html">Help</a></li>
+                <li><a class="navlink" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <audio id="music1">
+        <source src="bensound-relaxing.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+
+    <script src="breathe.js"></script>
+
+</body>
+</html>
