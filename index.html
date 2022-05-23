@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./breathestyles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+    <link rel="stylesheet" href="./assets/css/breathestyles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope|DotGothic16">
     <script src="https://kit.fontawesome.com/a6858ade68.js" crossorigin="anonymous"></script>
+    <script src="breathe.js" defer></script>
     <title>Breathe App Alpha</title>
 </head>
 <body>
@@ -38,13 +39,15 @@
 
         <div class="audioplayer" id="audiocontrols">
             <div id="audioplayertitle">Audio Player</div>
-            <button id="audioplay"><i class="fa fa-play" aria-hidden="true"></i></button>   
-            <select name="musicselect" id="musicselect">
-                <option value="music1">Calming Music</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>    
+            
+            <button id="audioplaybutton"><i class="fa fa-play" aria-hidden="true"></i></button> 
+            
+            <div id="nowplaying">Not playing</div>  
+            
+            <button id="audioskipback"><i class="fa-solid fa-backward-fast"></i></i></button> 
+            
+            <button id="audioskipforward"><i class="fa-solid fa-forward-fast"></i></button> 
+
 
         </div>
 
@@ -58,14 +61,25 @@
                 <li><a class="navlink" href="contact.html">Contact</a></li>
             </ul>
         </nav>
+
+        <p>Sound effects from zapsplat.com and Bensound</p>
     </footer>
 
-    <audio id="music1">
-        <source src="bensound-relaxing.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-      </audio>
+    <audio id="audio1">
+        <source src="./assets/audio/bensound-relaxing.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
-    <script src="breathe.js"></script>
+    <audio id="audio2">
+        <source src="./assets/audio/rain-zapsplat.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="audio3">
+        <source src="./assets/audio/binaural-zapsplat.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
 
 </body>
 </html>

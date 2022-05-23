@@ -1,12 +1,12 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
+}
 
 body {
-    background-color: #2C3D55;
-    color:#9E9CAB;
+    background-color: #293241;
+    color:#E0FBFC;
     font-family: Manrope, Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     text-align: center;
@@ -18,16 +18,16 @@ body {
 }
 
 header {
-    background-color:#3E4C5E;
+    background-color:#3D5A80;
     padding: 3vh 0 3vh 0;
-    color:#9E9CAB;
+    color:#E0FBFC;
     font-size:3rem;
     font-weight:bold;
     grid-row: 1;
 }
 
 footer {
-    background-color:#3E4C5E;
+    background-color:#3D5A80;
     width: 100%;
     grid-row: 4;
     padding: 0;
@@ -43,12 +43,11 @@ footer {
 /* Control buttons and readouts */
 
 .controls {
-    grid-row:3;
+    grid-row: 3;
 }
 
 .controlblock {
-    border-radius: 5%;
-    border: 2px solid #9FF9BE;
+    border: 2px solid #EE6C4D;
     margin: auto;
     margin-bottom: 1vh;
     display:grid;
@@ -58,14 +57,14 @@ footer {
 
 @media screen and (min-width: 500px) {
     .controlblock, .audioplayer {
-        width:50vw;
+        width: 50vw;
     }
 }
 
 
 @media screen and (min-width: 1000px) {
     .controlblock, .audioplayer {
-        width:30vw;
+        width: 30vw;
     }
 }
 
@@ -89,35 +88,33 @@ footer {
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: -1;
-    border-radius: 10% 0 0 10%;
-    border-right: 3px solid #9FF9BE;
+    border: 0px;
 }
 
 .rightbutton{
     grid-column: 3;
     grid-row-start: 1;
     grid-row-end: -1;
-    border-radius: 0 10% 10% 0;
-    border-left: 3px solid #9FF9BE;
+    border: 0px;
 }
 
 button {
     padding: 1rem;
     /* border-radius: 10%; */
     font-size: 1.4rem;
-    color: #9FF9BE;
+    color: #EE6C4D;
     background-color: #3E4C5E;
 }
 
 .audioplayer {
     border-radius: 5%;
-    border: 2px solid #9FF9BE;
+    border: 2px solid #EE6C4D;
     /* width: 50vw; */
     margin: auto;
     margin-bottom: 1vh;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     width:500
 }
 
@@ -131,20 +128,34 @@ button {
     font-weight: 600;
 }
 
-#audioplay {
+#audioplaybutton {
     grid-column: 1;
-    grid-row: 2;
+    grid-row-start: 2;
+    grid-row-end: -1;
     border-radius: 0 0 0 10%;
+    border: 0px;
 }
 
-.audioplayer > select {
-    border-radius: 5px;
-    padding: 0.5em;
+#nowplaying {
+    grid-row: 2;
     grid-column-start: 2;
     grid-column-end: -1;
-    grid-row: 2;
-    border-top: 3px solid #9FF9BE;
-    background-color: #2C3D55;
+    text-align: center;
+    margin: auto;
+    font-family: DotGothic16, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#audioskipback {
+    grid-row: 3;
+    grid-column: 2;
+    border: 0;
+}
+
+#audioskipforward {
+    grid-row: 3;
+    grid-column: 3;
+    border: 0;
+    border-radius: 0 0 10% 0; 
 }
 
 /* Navigation links */
