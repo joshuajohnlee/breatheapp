@@ -33,7 +33,7 @@ audioskipback.addEventListener("click", skipback);
 
 // Write out the intial values
 speedreadout.innerHTML = speed;
-volumereadout.innerHTML = playervolume * 10 + "%";
+volumereadout.innerHTML = "VOLUME:<br>" + playervolume * 10 + "%";
 
 
 // Speed change functions
@@ -59,7 +59,7 @@ function volumechangeup() {
         playervolume++
     } 
     audios[currentaudiotrack].volume = playervolume/10
-    volumereadout.innerHTML = playervolume * 10 + "%"
+    volumereadout.innerHTML = "VOLUME:<br>" + playervolume * 10 + "%"
 }
     
 function volumechangedown() {
@@ -67,7 +67,7 @@ function volumechangedown() {
         playervolume--
     }
     audios[currentaudiotrack].volume = playervolume/10
-    volumereadout.innerHTML = playervolume * 10 + "%"
+    volumereadout.innerHTML = "VOLUME:<br>" + playervolume * 10 + "%"
 }
 
 function playbacktoggle() {

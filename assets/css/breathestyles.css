@@ -118,7 +118,7 @@ button {
     width:500
 }
 
-#audioplayertitle {
+/* #audioplayertitle {
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row: 1;
@@ -126,6 +126,28 @@ button {
     margin: 0.5rem;
     text-transform: uppercase;
     font-weight: 600;
+} */
+
+button {
+    border: 0.1rem solid #293241;
+}
+
+#volumeup {
+    grid-column: 3;
+    grid-row: 1;
+    border-radius: 0 10% 0 0;
+}
+
+#volumedown {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 10% 0 0 0;
+}
+
+#volumereadout {
+    grid-column: 2;
+    grid-row: 1;
+    border-bottom: 0.1rem dotted white;
 }
 
 #audioplaybutton {
@@ -133,7 +155,6 @@ button {
     grid-row-start: 2;
     grid-row-end: -1;
     border-radius: 0 0 0 10%;
-    border: 0px;
 }
 
 #nowplaying {
@@ -148,13 +169,11 @@ button {
 #audioskipback {
     grid-row: 3;
     grid-column: 2;
-    border: 0;
 }
 
 #audioskipforward {
     grid-row: 3;
     grid-column: 3;
-    border: 0;
     border-radius: 0 0 10% 0; 
 }
 

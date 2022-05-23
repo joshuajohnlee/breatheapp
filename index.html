@@ -28,17 +28,14 @@
             <button class="rightbutton" id="speedup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
             </button>
         </div>
-        
-        <div class="controlblock" id="volumecontrols">
-            <div class="controlblocktitle">Volume</div>
-            <button class="leftbutton" id="volumedown"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>       
-            <div class="readout" id="volumereadout"></div>
-            <button class="rightbutton" id="volumeup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </button>
-        </div>
 
-        <div class="audioplayer" id="audiocontrols">
-            <div id="audioplayertitle">Audio Player</div>
+        <section class="audioplayer" id="audiocontrols">
+
+            <button id="volumedown"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>       
+            <div class="readout" id="volumereadout"></div>
+            <button id="volumeup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+            </button>
             
             <button id="audioplaybutton"><i class="fa fa-play" aria-hidden="true"></i></button> 
             
@@ -49,7 +46,7 @@
             <button id="audioskipforward"><i class="fa-solid fa-forward-fast"></i></button> 
 
 
-        </div>
+        </section>
 
     </div>
 
@@ -65,17 +62,17 @@
         <p>Sound effects from zapsplat.com and Bensound</p>
     </footer>
 
-    <audio id="audio1">
+    <audio id="audio1" loop>
         <source src="./assets/audio/bensound-relaxing.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
-    <audio id="audio2">
+    <audio id="audio2" loop>
         <source src="./assets/audio/rain-zapsplat.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
-    <audio id="audio3">
+    <audio id="audio3" loop>
         <source src="./assets/audio/binaural-zapsplat.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
