@@ -76,7 +76,7 @@ function volumechangeup() {
     if (playervolume >= 1 && playervolume < 10) {
         playervolume++
     } 
-    audios[currentaudiotrack].volume = playervolume/10
+    audios[currentaudiotrack][0].volume = playervolume/10
     volumereadout.innerHTML = "VOLUME:<br>" + playervolume * 10 + "%"
 }
     
