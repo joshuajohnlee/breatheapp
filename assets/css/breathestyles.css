@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('VCROSDMono.woff2') format('woff2'),
+        url('VCROSDMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -163,7 +172,7 @@ button {
     grid-column-end: -1;
     text-align: center;
     margin: auto;
-    font-family: DotGothic16, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'VCR OSD Mono', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #audioskipback {
