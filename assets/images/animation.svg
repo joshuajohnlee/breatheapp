@@ -9,16 +9,17 @@
         />
 </circle>
 
-<circle id="circle1" cx="250" cy="250" r="200" fill="transparent" stroke="#c6e2e9" stroke-width="30"> 
+<circle id="circle2" cx="250" cy="250" r="200" fill="transparent" stroke="#c6e2e9" stroke-width="30"> 
         <animate
             attributeName="r"
             values="150;3;3;150;150"
             dur="10s"
             repeatCount="indefinite" 
         />
+        
 </circle>
 
-<circle id="circle1" cx="250" cy="250" r="200" fill="transparent" stroke="#f1ffc4" stroke-width="30"> 
+<circle id="circle3" cx="250" cy="250" r="200" fill="transparent" stroke="#f1ffc4" stroke-width="30"> 
         <animate
             attributeName="r"
             values="100;2;2;100;100"
@@ -27,7 +28,7 @@
         />
 </circle>
 
-<circle id="circle1" cx="250" cy="250" r="200" fill="transparent" stroke="#ffcaaf" stroke-width="30"> 
+<circle id="circle4" cx="250" cy="250" r="200" fill="transparent" stroke="#ffcaaf" stroke-width="30"> 
         <animate
             attributeName="r"
             values="50;1;1;50;50"
