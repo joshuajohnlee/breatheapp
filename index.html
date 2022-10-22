@@ -21,35 +21,65 @@
     </header>
         
     <div id="illustration">
-        <img src="./assets/images/animation.svg" />
+        <svg width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+            <circle class="circle" id="circle1" cx="250" cy="250" r="200" fill="transparent" stroke="#a7bed3" stroke-width="30"> 
+                    <animate
+                        attributeName="r"
+                        values="200;4;4;200;200"
+                        dur="10s"
+                        repeatCount="indefinite" 
+                    />
+            </circle>
+            
+            <circle class="circle" id="circle2" cx="250" cy="250" r="200" fill="transparent" stroke="#c6e2e9" stroke-width="30"> 
+                    <animate
+                        attributeName="r"
+                        values="150;3;3;150;150"
+                        dur="10s"
+                        repeatCount="indefinite" 
+                    />
+                    
+            </circle>
+            
+            <circle class="circle" id="circle3" cx="250" cy="250" r="200" fill="transparent" stroke="#f1ffc4" stroke-width="30"> 
+                    <animate
+                        attributeName="r"
+                        values="100;2;2;100;100"
+                        dur="10s"
+                        repeatCount="indefinite" 
+                    />
+            </circle>
+            
+            <circle class="circle" id="circle4" cx="250" cy="250" r="200" fill="transparent" stroke="#ffcaaf" stroke-width="30"> 
+                    <animate
+                        attributeName="r"
+                        values="50;1;1;50;50"
+                        dur="10s"
+                        repeatCount="indefinite" 
+                    />
+            </circle>
+            
+            </svg>
     </div>
 
     <div id="controls">
+        
         <div class="controlblock" id="speedcontrols">
             <div class="controlblocktitle">Speed</div>
-            <button  class="leftbutton" id="speeddown"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>       
-            <div class="readout" id="speedreadout"></div>
-            <button class="rightbutton" id="speedup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </button>
+            <button class="speedbutton" id="speedslowest">SLOWEST</button>       
+            <button class="speedbutton" id="speedslow">SLOW</button>
+            <button class="speedbutton" id="speednormal">NORMAL</button>
         </div>
 
         <section class="audioplayer" id="audiocontrols">
-
             <button id="volumedown"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>       
             <div class="readout" id="volumereadout"></div>
-            <button id="volumeup"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-
-            </button>
-            
+            <button id="volumeup"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
             <button id="audioplaybutton"><i class="fa fa-play" aria-hidden="true"></i></button> 
-            
             <div id="nowplaying">Not playing</div>  
-            
             <button id="audioskipback"><i class="fa-solid fa-backward-fast"></i></i></button> 
-            
             <button id="audioskipforward"><i class="fa-solid fa-forward-fast"></i></button> 
-
-
         </section>
 
     </div>
@@ -73,7 +103,6 @@
         <source src="./assets/audio/binaural-zapsplat.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
 
 </body>
 </html>

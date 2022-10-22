@@ -1,12 +1,12 @@
 // Initialise variables for controls
-let speed = 5;
+let speed = 2;
 let playervolume = 5;
 let currentaudiotrack = 0;
 
 // Set variables for HTML elements
-let speedreadout = document.getElementById('speedreadout');
-let speedupbutton = document.getElementById('speedup');
-let speeddownbutton = document.getElementById('speeddown')
+let speednormalbutton = document.getElementById('speednormal');
+let speedslowbutton = document.getElementById('speedslow');
+let speedslowestbutton = document.getElementById('speedslowest');
 let volumereadout = document.getElementById('volumereadout');
 let volumeupbutton = document.getElementById('volumeup');
 let volumedownbutton = document.getElementById('volumedown');
@@ -41,8 +41,9 @@ console.log("Audio listing complete, found " + audios.length + " items.")
 // const audios = [audio1, audio2, audio3];
 
 // Add button listeners
-speedupbutton.addEventListener("click", speedchangeup);
-speeddownbutton.addEventListener("click", speedchangedown);
+speedslowestbutton.addEventListener("click", function() {updatespeed(1), false});
+speedslowbutton.addEventListener("click",  function() {updatespeed(2), false});
+speednormalbutton.addEventListener("click",  function() {updatespeed(3), false})
 volumeupbutton.addEventListener("click", volumechangeup);
 volumedownbutton.addEventListener("click", volumechangedown);
 audioplaybutton.addEventListener("click", playbacktoggle);
@@ -50,25 +51,7 @@ audioskipforward.addEventListener("click", skipforward);
 audioskipback.addEventListener("click", skipback);
 
 // Write out the intial values
-speedreadout.innerHTML = speed;
 volumereadout.innerHTML = "VOLUME:<br>" + playervolume * 10 + "%";
-
-
-// Speed change functions
-
-function speedchangeup() {
-    if (speed >= 1 && speed < 10) {
-        speed++
-    }  
-    speedreadout.innerHTML = speed
-}
-    
-function speedchangedown() {
-    if (speed > 1 && speed <= 10) {
-        speed--
-    }
-    speedreadout.innerHTML = speed 
-}
 
 // Volume change functions
 
@@ -127,4 +110,25 @@ function skipback() {
 // Could replace this with something more dynamic - have audio elements and their titles in a multilayer array?
 function updateTitle() {
     nowplaying.innerHTML= "Now playing: " + audios[currentaudiotrack][1];
+}
+
+// Animation speed change
+
+function updatespeed(newspeed) {
+    const animations = document.querySelectorAll("animate");
+    animations.forEach(function (element) {
+        switch(newspeed) {
+            case 1:
+                element.setAttributeNS(null, "dur", "14s");
+                break;
+            case 2:
+                element.setAttributeNS(null, "dur", "12s");
+                break;
+            case 3:
+                element.setAttributeNS(null, "dur", "10s");
+                break;
+            default:
+                console.log("Could not change the speed");
+        }
+    }    )
 }

@@ -87,14 +87,21 @@ footer {
     padding:0.5vh;
 }
 
-.leftbutton {
+#speedslowest {
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: -1;
     border: 0px;
 }
 
-.rightbutton{
+#speedslow{
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    border: 0px;
+}
+
+#speednormal{
     grid-column: 3;
     grid-row-start: 1;
     grid-row-end: -1;
@@ -106,6 +113,10 @@ button {
     font-size: 1.4rem;
     color: #EE6C4D;
     background-color: #3E4C5E;
+}
+
+.speedbutton:active {
+    background-color: #9dafc7;
 }
 
 .audioplayer {
