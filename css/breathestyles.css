@@ -4,6 +4,14 @@
     margin: 0;
 }
 
+button {
+    border: 0.1rem solid #293241;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #EE6C4D;
+    background-color: #3E4C5E;
+}
+
 body {
     background-color: #293241;
     /* background-image: url(../images/rain.jpg);
@@ -19,6 +27,8 @@ body {
     height:100vh;
 }
 
+/* Set locations of containers within the body tag */
+
 header {
     background-color:rgba(61, 90, 128, 0.8);
     padding: 3vh 0 3vh 0;
@@ -26,6 +36,14 @@ header {
     font-size:3rem;
     font-weight:bold;
     grid-row: 1;
+}
+
+.illustration {
+    grid-row:2;
+}
+
+.controls {
+    grid-row: 3;
 }
 
 footer {
@@ -38,99 +56,30 @@ footer {
     justify-content: center;
 }
 
-.illustration {
-    grid-row:2;
-}
-
 /* Control buttons and readouts */
-
-.controls {
-    grid-row: 3;
-}
 
 .controlblock {
     border: 2px solid #EE6C4D;
     background-color:rgba(61, 90, 128, 0.8);
     margin: auto;
     margin-bottom: 1vh;
-    display:grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 
-@media screen and (min-width: 500px) {
-    .controlblock, .audioplayer {
-        width: 50vw;
-    }
+#speedcontrols {
+    display: flex;
+    flex-direction: column;
 }
 
-
-@media screen and (min-width: 1000px) {
-    .controlblock, .audioplayer {
-        width: 30vw;
-    }
-}
-
-.controlblocktitle {
-    font-size: 1.25rem;
-    margin: 0.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.readout {
-    display: inline;
-    grid-column: 2;
-    grid-row: 2;
-    padding:0.5vh;
-}
-
-#speedslowest {
-    grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: -1;
+.speedbutton {
     border: 0px;
 }
 
-#speedslow{
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    border: 0px;
-}
+/* Audio player */
 
-#speednormal{
-    grid-column: 3;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    border: 0px;
-}
-
-button {
-    padding: 1rem;
-    font-size: 1.4rem;
-    color: #EE6C4D;
-    background-color: #3E4C5E;
-}
-
-.speedbutton:active {
-    background-color: #9dafc7;
-}
-
-.audioplayer {
-    border: 2px solid #EE6C4D;
-    margin: auto;
-    margin-bottom: 1vh;
+#audiocontrols {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-
-button {
-    border: 0.1rem solid #293241;
+    grid-template-rows: 1fr 1fr;
 }
 
 #volumeup {
@@ -151,15 +100,15 @@ button {
 
 #audioplaybutton {
     grid-column: 1;
-    grid-row-start: 2;
+    grid-row-start: 3;
     grid-row-end: -1;
 }
 
 #nowplaying {
     grid-row: 2;
-    grid-column-start: 2;
-    grid-column-end: -1;
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
     margin: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -172,7 +121,6 @@ button {
 #audioskipforward {
     grid-row: 3;
     grid-column: 3;
-    border-radius: 0 0 10% 0; 
 }
 
 /* Navigation links */
@@ -199,5 +147,4 @@ nav > ul > li {
 --black-coral: #536271;
 --charcoal: #3e4c5e;
 --prussian-blue: #2c3d55;
-#9E9CAB
 */

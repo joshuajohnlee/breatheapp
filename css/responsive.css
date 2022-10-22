@@ -1,0 +1,11 @@
+@media screen and (min-width: 500px) {
+    .controlblock {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .controlblock {
+        width: 30vw;
+    }
+}
